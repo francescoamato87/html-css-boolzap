@@ -42,6 +42,16 @@
       <input class="search" placeholder="Cerca o inizia una nuova chat">
     </div>
 
+    <section class="contacts">
+      <img src="./img/avatar_1.jpg" alt="">
+      <ul>
+        <li v-for = "(contact, index) in contacts">
+          {{ contact.name }}
+        </li>
+      </ul>
+
+    </section>
+
 
   </aside>
 

@@ -154,6 +154,38 @@ body{
 
 /* ..................................................... */
 
+.contacts{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.contacts img{
+  max-width: 15%;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.contacts li{
+
+  font-size: 16px;
+  margin-right: auto;
+  list-style: none;
+}
+
+.contacts li img{
+  flex-direction: column;
+}
+
+
+
+
+
+
+/* ............................................................... */
+
 .cont-footer {
   display: flex;
   align-items: center;
@@ -171,3 +203,5 @@ body{
 .cont-footer i{
   color: grey;
 }
+
+/* ........................................................... */
