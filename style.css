@@ -19,6 +19,11 @@ body{
     );
 }
 
+i:hover{
+  color:#000;
+  cursor:pointer;
+}
+
 /* LAYOUT */
 .container{
   display: flex;
@@ -68,11 +73,15 @@ body{
   padding: 15px;
   background-color: #8edafc;
 }
-.side-notifiche p,a{
+.side-notifiche p, a{
   font-size: 16px;
   line-height: 10px;
   padding: 3px;
   margin-left: 3px;
+}
+
+.side-notifiche a{
+  color: blue;
 }
 
 .container-bell{
@@ -191,12 +200,6 @@ body{
 .contacts li:hover{
   background-color: #eaeaea;
 }
-
-
-
-
-
-
 /* ............................................................... */
 
 .cont-footer {
@@ -205,13 +208,17 @@ body{
   justify-content: space-between;
 }
 .cont-footer .write-messages{
-  min-width: 90%;
-  padding: 8px;
+  min-width: 89%;
+  padding: 7px;
   margin-left: 5px;
   border: none;
   box-shadow: 1px 1px #fff;
   outline: none;
 }
+.cont-footer .write-messages:focus{
+  border:0.5px solid red;
+}
+
 
 .cont-footer i{
   color: grey;
@@ -221,6 +228,13 @@ body{
 
 /* MESSAGES */
 
+.messages{
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-end ;
+  /* flex-direction: column; */
+  flex-flow: column;
+}
 .sent{
   border: 1px solid transparent;
   border-radius: 15px;
@@ -236,4 +250,25 @@ body{
   width: 250px;
   height:50px;
   margin-top: 30px;
+}
+
+ .sent p{
+   font-size: 11px;
+   padding-left: 15px;
+   margin-top: 15px;
+   font-weight: 660;
+ }
+ .received p{
+  font-size: 11px;
+  padding-left: 10px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.sent p:last-child,
+.received p:last-child{
+  margin:0px 200px;
+  font-size: 10px;
+
+  color: grey;
 }
