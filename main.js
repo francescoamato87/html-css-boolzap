@@ -6,6 +6,9 @@
 var app = new Vue({
     el: '#app',
     data: {
+
+        indexContacts:0,
+
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -98,5 +101,10 @@ var app = new Vue({
             },
         ]
     },
-    methods: {}
+    methods: {
+
+      text(index){
+        this.indexContacts = index;
+      }
+    }
 });

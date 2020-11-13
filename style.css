@@ -84,6 +84,7 @@ body{
 .container-bell i{
   padding-left: 8px;
   padding-top: 10px;
+  color: #8edafc;
 }
 .side .input-search{
   background-color:#eaeaea;
@@ -203,7 +204,7 @@ body{
   align-items: center;
   justify-content: space-between;
 }
-.cont-footer .messages{
+.cont-footer .write-messages{
   min-width: 90%;
   padding: 8px;
   margin-left: 5px;
@@ -217,3 +218,22 @@ body{
 }
 
 /* ........................................................... */
+
+/* MESSAGES */
+
+.sent{
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: white;
+  width: 250px;
+  height:50px;
+}
+
+.received{
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #FAEBD7;
+  width: 250px;
+  height:50px;
+  margin-top: 30px;
+}

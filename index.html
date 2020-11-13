@@ -46,9 +46,9 @@
     <section class="contacts">
 
       <ul class="contacts-names">
-        <li v-for = "(contact, index) in contacts">
+        <li v-for = "(contact, index) in contacts" @click="text(index)" >
           <img class ="avatar"
-          :src= " ` ./img/avatar${contact.avatar}.jpg `  "
+          :src= " `./img/avatar${contact.avatar}.jpg ` "
           :alt="contact.name">
           <p>{{ contact.name }}</p>
       </li>
@@ -56,15 +56,17 @@
 
     </section>
 
+</aside>
 
-  </aside>
+<!-- .......................................................... -->
 
   <main class="content">
 
     <section class="cont-header">
       <div class="header-chat">
-        <img class = "avatar" src="./img/avatar_1.jpg" alt="">
-        <p>Michele</p>
+        <img class = "avatar" :src=" './img/avatar'+contacts[indexContacts].avatar + '.jpg' " alt="">
+        <p>{{ contacts[indexContacts].name}}</p>
+
         <span class="header-chat-icons">
           <i class="fas fa-search"></i>
           <i class="fas fa-paperclip"></i>
@@ -74,13 +76,20 @@
     </section>
 
     <section class="cont-main">
-      <i class="far fa-comment-dots"></i>
+      <div class="messages">
+        <div class="sent">
+        </div>
+        <div class="received"></div>
+
+      </div>
+
+
     </section>
 
 
     <section class="cont-footer">
       <i class="far fa-smile"></i>
-      <input class="messages"type="text" placeholder="Scrivi un messaggio...">
+      <input class="write-messages"type="text" placeholder="Scrivi un messaggio...">
       <i class="fas fa-microphone-alt"></i>
     </section>
 
