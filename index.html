@@ -18,9 +18,10 @@
 <div id ="app" class="container">
 
   <aside class="side">
+
     <div class="side-utente">
-      <img src="./img/avatar_io.jpg" alt="">
-      <p>Nome Utente</p>
+      <img class="avatar" :src=" './img/avatar' + user.avatar + '.jpg' " alt="user.name">
+      <p>{{ user.name }}</p>
       <span class="side-utente-icons">
         <i class="fas fa-circle-notch"></i>
         <i class="fas fa-comment-alt"></i>
@@ -43,11 +44,14 @@
     </div>
 
     <section class="contacts">
-      <img src="./img/avatar_1.jpg" alt="">
-      <ul>
+
+      <ul class="contacts-names">
         <li v-for = "(contact, index) in contacts">
-          {{ contact.name }}
-        </li>
+          <img class ="avatar"
+          :src= " ` ./img/avatar${contact.avatar}.jpg `  "
+          :alt="contact.name">
+          <p>{{ contact.name }}</p>
+      </li>
       </ul>
 
     </section>
@@ -59,7 +63,7 @@
 
     <section class="cont-header">
       <div class="header-chat">
-        <img src="./img/avatar_1.jpg" alt="">
+        <img class = "avatar" src="./img/avatar_1.jpg" alt="">
         <p>Michele</p>
         <span class="header-chat-icons">
           <i class="fas fa-search"></i>

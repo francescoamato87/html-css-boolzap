@@ -154,29 +154,41 @@ body{
 
 /* ..................................................... */
 
-.contacts{
+.contacts {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  overflow-y: auto;
+}
+
+.contacts-names{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
+  flex-direction: column;
 }
 
-.contacts img{
+.contacts .avatar{
   max-width: 15%;
   padding: 10px;
   border-radius: 50px;
 }
 
-.contacts li{
-
+.contacts li {
   font-size: 16px;
-  margin-right: auto;
+  /* margin-right: auto; */
   list-style: none;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.contacts li img{
-  flex-direction: column;
+.contacts li p{
+  display: inline-flex;
+}
+
+.contacts li:hover{
+  background-color: #eaeaea;
 }
 
 
