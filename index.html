@@ -40,13 +40,14 @@
     </div>
 
     <div class="input-search">
+      <i class="fas fa-search"></i>
       <input class="search" placeholder="Cerca o inizia una nuova chat">
     </div>
 
     <section class="contacts">
 
       <ul class="contacts-names">
-        <li v-for = "(contact, index) in contacts" @click="text(index)" >
+        <li v-for = "(contact, index) in contacts" @click="getActive(index)" >
           <img class ="avatar"
           :src= " `./img/avatar${contact.avatar}.jpg ` "
           :alt="contact.name">
@@ -67,6 +68,7 @@
         <img class = "avatar" :src=" './img/avatar'+contacts[indexContacts].avatar + '.jpg' " alt="">
         <p>{{ contacts[indexContacts].name}}</p>
 
+
         <span class="header-chat-icons">
           <i class="fas fa-search"></i>
           <i class="fas fa-paperclip"></i>
@@ -76,14 +78,15 @@
     </section>
 
     <section class="cont-main">
-      <div class="messages">
-        <div class="sent">
-          <p>Hai portato a spasso il cane?</p>
-          <p>date</p>
+
+      <div class="messages" v-for="message in contacts[contactActive].messages"
+      :class="message.status == 'sent' ? 'sent' : 'received'" >
+          <p>{{message.message}}</p>
+          <p>{{message.date}}</p>
         </div>
         <div class="received">
-          <p>Tutto fatto</p>
-          <p>date</p>
+          <p></p>
+          <p></p>
         </div>
 
       </div>
@@ -94,7 +97,7 @@
 
     <section class="cont-footer">
       <i class="far fa-smile"></i>
-      <input class="write-messages"
+      <input class="write-conversation"
       type="text"
       placeholder= "Scrivi un messaggio..."
       >

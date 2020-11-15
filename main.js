@@ -8,6 +8,7 @@ var app = new Vue({
     data: {
 
         indexContacts:0,
+        contactActive: 0,
 
         // nostro account
         user: {
@@ -103,8 +104,11 @@ var app = new Vue({
     },
     methods: {
 
-      text(index){
+      getActive(index){
         this.indexContacts = index;
-      }
+      },
+      removeMessages(indexMessage){
+      this.contacts[this.indexContacts].messages.splice(indexMessage,1);
+      },
     }
 });
