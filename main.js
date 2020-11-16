@@ -159,6 +159,7 @@ var app = new Vue({
         ],
         activeContact: 0,
         newMessage: '',
+        computerMessage:'ok!'
 
     },
     methods: {
@@ -177,9 +178,12 @@ var app = new Vue({
             date: dayjs().format('D/MM/YYYY HH:mm:ss')
           });
           console.log(newMessage);
-          this.newMessage = '';
-
+          this.newMessage = 'activeContact';
         }
-      }
+      },
+
+      setTimeout(){}
+
+
     }
-});
+}); // <-- The End
