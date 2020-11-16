@@ -12,7 +12,7 @@ var app = new Vue({
         // nostro account
         user: {
             name: 'Nome Utente',
-            avatar: '_io'
+            avatar: '_fra'
         },
         // Elenco contatti
         contacts: [
@@ -99,6 +99,63 @@ var app = new Vue({
                     }
                 ],
             },
+
+            {
+                name: 'Andrea',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Come sarà il tempo domani?!?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'non so, non ho avuto il tempo di controllare',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'spero faccia bel tempo :)',
+                        status: 'received'
+                    },
+                ],
+            },
+            {
+                name: 'Tommaso',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Quando finirà questo lockdown',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Boh, non saprei dirti',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Paolo',
+                avatar: '_8',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Lo sport all\'aperto fa bene alla salute!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Preferisco andare in palestra',
+                        status: 'received'
+                    }
+                ],
+            },
         ],
         activeContact: 0
     },
@@ -107,6 +164,11 @@ var app = new Vue({
         console.log(index);
 
         this.activeContact = index;
+      },
+      addConversation(conversation){
+        console.log(conversation);
+
+        this.activeContact = conversation;  
       }
     }
 });

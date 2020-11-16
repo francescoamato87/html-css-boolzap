@@ -20,8 +20,8 @@
   <aside class="side">
 
     <div class="side-utente">
-      <img class="avatar" src=" ./img/avatar_io.jpg " alt="">
-      <p>Nome Utente</p>
+      <img class="avatar" src=" ./img/avatar_fra.jpg " alt="">
+      <p>Francesco</p>
       <span class="side-utente-icons">
         <i class="fas fa-circle-notch"></i>
         <i class="fas fa-comment-alt"></i>
@@ -115,14 +115,20 @@
 
 <!-- ................................................................ -->
 
-    <section class="cont-footer">
+    <div v-for= "(conversation, index) in contacts"
+
+    :class= " ['conversation', index === activeContact ? 'active' : '' ] "
+     @click="addConversation(conversation)">
+
       <i class="far fa-smile"></i>
       <input class="write-conversation"
       type="text"
       placeholder= "Scrivi un messaggio..."
       >
+
       <i class="fas fa-microphone-alt"></i>
-    </section>
+
+    </div>
 
   </main>
 

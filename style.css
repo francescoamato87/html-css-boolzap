@@ -170,7 +170,7 @@ i:hover{
   justify-content: space-between;
   flex-direction: column;
   background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
+  /* border-bottom: 1px solid #eaeaea; */
   overflow-y: auto;
   border-bottom: 1px solid #eaeaea;
   cursor: pointer;
@@ -183,9 +183,14 @@ i:hover{
   border-radius: 50px;
 }
 
+.contact .user{
+display: flex;
+align-items: center;
+border-bottom: 1px solid #eaeaea;
+
+}
 .contact .user h3 {
-  display: inline-flex;
-  font-size: 16px;
+  font-size: 14px;
 }
 .active{
   background:#eaeaea;
@@ -193,6 +198,7 @@ i:hover{
 
 
 /* ............................................................... */
+
 .cont-footer {
   display: flex;
   align-items: center;
