@@ -95,6 +95,10 @@ i:hover{
   padding-top: 10px;
   color: #8edafc;
 }
+
+.container-bell i:hover{
+  color:blue;
+}
 .side .input-search{
   background-color:#eaeaea;
   padding: 10px;
@@ -124,105 +128,89 @@ i:hover{
   background-color:#eaeaea;
 }
 
-.cont-footer{
-  background-color: #eaeaea;
-  padding: 20px;
-  /* background: rgba(255,0,0, .5); */
-}
-
-.cont-main{
-  flex-grow: 1;
-  padding: 20px;
-  background-image: url(./img/mine.jpg);
-}
-
 /* ....................................... */
 
-.header-chat{
+.profile{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-start;
   background-color: #eaeaea;
 }
 
-.header-chat img{
+.profile img{
   max-width: 64px;
   padding: 10px;
   border-radius: 50px;
 }
 
-.header-chat p{
+.header-contact-name{
   font-size: 16px;
-  margin-right: auto;
+  margin: auto;
 }
 
-.header-chat-icons{
+.time{
+  font-size: 11px
+}
+
+.profile-icons{
+  margin-left: auto;
   color: grey;
   padding: 15px;
 }
 
-.header-chat-icons i{
+.profile-icons i{
   padding: 5px;
 }
 
 /* ..................................................... */
 
 .contacts {
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
-  background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
-  overflow-y: auto;
-}
-
-.contacts-names{
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  overflow-y: auto;
+  border-bottom: 1px solid #eaeaea;
+  cursor: pointer;
 }
 
-.contacts .avatar{
+
+.contact img{
   max-width: 15%;
   padding: 10px;
   border-radius: 50px;
 }
 
-.contacts li {
-  font-size: 16px;
-  /* margin-right: auto; */
-  list-style: none;
-  border-bottom: 1px solid #eaeaea;
-}
-
-.contacts li p{
+.contact .user h3 {
   display: inline-flex;
+  font-size: 16px;
+}
+.active{
+  background:#eaeaea;
 }
 
-.contacts li:hover{
-  background-color: #eaeaea;
-}
+
 /* ............................................................... */
-
 .cont-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  background-color: #eaeaea;
+  padding: 10px;
 }
 .cont-footer .write-conversation{
-  min-width: 89%;
+  min-width: 85%;
   padding: 7px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   border: none;
   box-shadow: 1px 1px #fff;
   outline: none;
 }
 .cont-footer .write-conversation:focus{
-  border:0.5px solid red;
+  border:1px solid #8edafc;
 }
-
-
 .cont-footer i{
   color: grey;
 }
@@ -231,47 +219,43 @@ i:hover{
 
 /* MESSAGES */
 
-.message{
-  display: flex;
-  align-items:flex-end;
-  justify-content: flex-end ;
-  /* flex-direction: column; */
-  flex-flow: column;
+.messages-container{
+  flex-grow: 1;
+  padding: 20px;
+  background-image: url(./img/mine.jpg);
+
 }
-.sent{
+ .sent{
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: white;
-  width: 250px;
+  background-color: #FAEBD7;
+  width: 300px;
   height:50px;
+  margin-top: 15px;
+  margin-left: 450px;
 }
 
 .received{
   border: 1px solid transparent;
   border-radius: 15px;
-  background-color: #FAEBD7;
-  width: 250px;
+  background-color: white;
+  width: 300px;
   height:50px;
   margin-top: 30px;
 }
 
- .sent p{
-   font-size: 11px;
+.sent .message-text,
+.received .message-text {
+   font-size: 12px;
    padding-left: 15px;
    margin-top: 15px;
    font-weight: 660;
  }
- .received p{
-  font-size: 11px;
-  padding-left: 15px;
-  margin-top: 15px;
-  font-weight: 600;
-}
 
-.sent p:last-child,
-.received p:last-child{
-  margin:0px 170px;
-  font-size: 8px;
-
-  color: grey;
+.message-time{
+font-size: 10px;
+display: flex;
+align-content: center;
+justify-content: flex-end;
+padding: 8px;
 }

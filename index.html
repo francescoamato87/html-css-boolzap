@@ -20,8 +20,8 @@
   <aside class="side">
 
     <div class="side-utente">
-      <img class="avatar" :src=" './img/avatar' + user.avatar + '.jpg' " alt="user.name">
-      <p>{{ user.name }}</p>
+      <img class="avatar" src=" ./img/avatar_io.jpg " alt="">
+      <p>Nome Utente</p>
       <span class="side-utente-icons">
         <i class="fas fa-circle-notch"></i>
         <i class="fas fa-comment-alt"></i>
@@ -44,18 +44,24 @@
       <input class="search" placeholder="Cerca o inizia una nuova chat">
     </div>
 
-    <section class="contacts">
+<!-- ............................................................... -->
 
-      <ul class="contacts-names">
-        <li v-for = "(contact, index) in contacts" @click="getActive(index)" >
-          <img class ="avatar"
-          :src= " `./img/avatar${contact.avatar}.jpg ` "
-          :alt="contact.name">
-          <p>{{ contact.name }}</p>
-      </li>
-      </ul>
+    <div class="contacts">
 
-    </section>
+      <div v-for="(contact, index) in contacts"
+     :class= " ['contact', index === activeContact ? 'active' : '' ] "
+      @click="setActiveContact(index)"
+      >
+          <div class="user">
+            <img class="avatar"
+            :src= " `./img/avatar${contact.avatar}.jpg ` "
+            :alt= "contact.name"
+            >
+            <h3>{{ contact.name }}</h3>
+          </div>
+
+      </div>
+    </div>
 
 </aside>
 
@@ -63,37 +69,51 @@
 
   <main class="content">
 
-    <section class="cont-header">
-      <div class="header-chat">
-        <img class = "avatar" :src=" './img/avatar'+contacts[indexContacts].avatar + '.jpg' " alt="">
-        <p>{{ contacts[indexContacts].name}}</p>
+    <header>
+      <div class="profile">
+        <img class = "avatar"
+        :src=" `./img/avatar${contacts[activeContact].avatar}.jpg ` "
+        :alt="contacts[activeContact].name">
 
+        <h3>
+          <span class="header-contact-name">
+            {{ contacts[activeContact].name }}
+          </span>
+          <div class="time">
+            Ultimo accesso oggi 15.40
+          </div>
+        </h3>
 
-        <span class="header-chat-icons">
+        <span class="profile-icons">
           <i class="fas fa-search"></i>
           <i class="fas fa-paperclip"></i>
           <i class="fas fa-bars"></i>
         </span>
       </div>
-    </section>
 
-    <section class="cont-main">
+    </header>
 
-      <div class="messages" v-for="message in contacts[contactActive].messages"
-      :class="message.status == 'sent' ? 'sent' : 'received'" >
-          <p>{{message.message}}</p>
-          <p>{{message.date}}</p>
-        </div>
-        <div class="received">
-          <p></p>
-          <p></p>
-        </div>
+<!-- ............................................................  -->
 
+    <div class="messages-container">
+
+      <div v-for = "message in contacts[activeContact].messages"
+        :class="[ 'message', message.status ] " >
+
+        <span class="message-text">{{ message.message }}</span>
+        <span class= "message-time">{{ message.date }}</span>
       </div>
 
+      <!-- <div class="message received">
+        <span class="message-text"></span>
+        <span class= "message-time"></span>
+      </div> -->
 
-    </section>
 
+
+    </div>
+
+<!-- ................................................................ -->
 
     <section class="cont-footer">
       <i class="far fa-smile"></i>
