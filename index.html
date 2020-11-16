@@ -109,21 +109,20 @@
         <span class= "message-time"></span>
       </div> -->
 
-
-
     </div>
 
 <!-- ................................................................ -->
 
-    <div v-for= "(conversation, index) in contacts"
-
-    :class= " ['conversation', index === activeContact ? 'active' : '' ] "
-     @click="addConversation(conversation)">
+    <div class ="cont-footer">
 
       <i class="far fa-smile"></i>
-      <input class="write-conversation"
-      type="text"
+
+      <input
+      class= "write-conversation"
+      type= "text"
       placeholder= "Scrivi un messaggio..."
+      v-model="newMessage"
+      keyup.enter="addNewMessage(activeContact)"
       >
 
       <i class="fas fa-microphone-alt"></i>

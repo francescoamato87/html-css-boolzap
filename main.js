@@ -157,7 +157,9 @@ var app = new Vue({
                 ],
             },
         ],
-        activeContact: 0
+        activeContact: 0,
+        newMessage: '',
+
     },
     methods: {
       setActiveContact(index){
@@ -165,10 +167,19 @@ var app = new Vue({
 
         this.activeContact = index;
       },
-      addConversation(conversation){
-        console.log(conversation);
 
-        this.activeContact = conversation;  
+      // showChat:
+        addNewMessage(index){
+        if(this.newMessage.trim() !== '') {
+          this.contacts[index].messages.push({
+            message: this.newMessage,
+            status: 'sent',
+            date: dayjs().format('D/MM/YYYY HH:mm:ss')
+          });
+          console.log(newMessage);
+          this.newMessage = '';
+
+        }
       }
     }
 });
