@@ -40,7 +40,7 @@ i:hover{
 
 aside .side{
   display: flex;
-  flex-basis: 40%;
+  flex-basis: 30%;
   background: #fff;
   overflow-y: auto;
 }
@@ -49,6 +49,7 @@ aside .side-utente{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 67px;
   background-color: #eaeaea;
 
 }
@@ -129,7 +130,7 @@ aside .side .input-search i{
   background: #aaa;
   display: flex;
   flex-direction: column;
-  flex-basis: 59%;
+  flex-basis: 70%;
 }
 
 
@@ -233,7 +234,7 @@ border-bottom: 1px solid #eaeaea;
 
 .messages-container{
   flex-grow: 1;
-  padding: 20px;
+  /* padding: 20px; */
   background-image: url(./img/mine.jpg);
 
 }
@@ -244,7 +245,7 @@ border-bottom: 1px solid #eaeaea;
   width: 300px;
   height:50px;
   margin-top: 15px;
-  margin-left: 450px;
+  margin-left: 500px;
 }
 
 .received{
@@ -254,6 +255,7 @@ border-bottom: 1px solid #eaeaea;
   width: 300px;
   height:50px;
   margin-top: 30px;
+  margin-left: 150px;
 }
 
 .sent .message-text,
@@ -273,3 +275,19 @@ padding: 8px;
 }
 
               /* MEDIA QUERIES */
+
+@media screen and (max-width: 1340px){
+
+  body{
+    background-image: none;
+  }
+
+  .container{
+    width: 100%;
+  }
+
+  aside .side-utente-icons{
+    display: none;
+  }
+
+}

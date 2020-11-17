@@ -7,9 +7,7 @@ var app = new Vue({
     el: '#app',
     data: {
 
-
-
-        // nostro account
+      // nostro account
         user: {
             name: 'Nome Utente',
             avatar: '_fra'
@@ -166,6 +164,7 @@ var app = new Vue({
         ],
         activeContact: 0,
         newMessage: '',
+        searchContact:'',
 
     },
 
@@ -191,7 +190,7 @@ var app = new Vue({
 
           setTimeout(() =>{
             this.contacts[this.activeContact].messages.push({
-              message: 'sono contenta che funziona',
+              message: 'sono contento che funzionaaaaaaaaaaaaa!!!!!!!!!!',
               status: 'received',
               date: dayjs().format('D/MM/YYYY HH:mm:ss')
             });

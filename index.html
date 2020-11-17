@@ -23,8 +23,10 @@
   <aside class="side">
 
     <div class="side-utente">
-      <img class="avatar" src=" ./img/avatar_fra.jpg " alt="">
-      <p>Francesco</p>
+      <img class="avatar"
+      v-bind:src=" './img/avatar' + user.avatar + '.jpg' "
+      :alt="user.name">
+      <p>{{user.name}}</p>
       <span class="side-utente-icons">
         <i class="fas fa-circle-notch"></i>
         <i class="fas fa-comment-alt"></i>
