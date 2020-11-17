@@ -159,7 +159,6 @@ var app = new Vue({
         ],
         activeContact: 0,
         newMessage: '',
-        computerMessage:'ok!'
 
     },
     methods: {
@@ -172,18 +171,24 @@ var app = new Vue({
       // showChat:
         addNewMessage(index){
         if(this.newMessage.trim() !== '') {
-          this.contacts[index].messages.push({
-            message: this.newMessage,
+          this.contacts[this.activeContact].messages.push({
+            message: this.newMessage.trim(),
             status: 'sent',
             date: dayjs().format('D/MM/YYYY HH:mm:ss')
           });
-          console.log(newMessage);
-          this.newMessage = 'activeContact';
+          // console.log(newMessage);
+
+          this.newMessage = '';
+
+
+          setTimeout(() =>{
+            this.contacts[this.activeContact].messages.push({
+              message: 'sono contenta che funziona',
+              status: 'received',
+              date: dayjs().format('D/MM/YYYY HH:mm:ss')
+            });
+          }, 1000);
         }
-      },
-
-      setTimeout(){}
-
-
+      }
     }
 }); // <-- The End
