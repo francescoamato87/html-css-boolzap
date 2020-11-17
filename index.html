@@ -72,13 +72,14 @@
 
 <!-- .......................................................... -->
 
-  <main class="content">
+  <main class= "content">
 
-    <header>
-      <div class="profile">
-        <img class = "avatar"
-        :src=" `./img/avatar${contacts[activeContact].avatar}.jpg ` "
-        :alt="contacts[activeContact].name">
+
+
+    <header class="profile">
+      <img class = "avatar"
+      :src=" `./img/avatar${contacts[activeContact].avatar}.jpg ` "
+      :alt="contacts[activeContact].name">
 
         <h3>
           <span class="header-contact-name">
@@ -89,12 +90,11 @@
           </div>
         </h3>
 
-        <span class="profile-icons">
+        <div class="profile-icons">
           <i class="fas fa-search"></i>
           <i class="fas fa-paperclip"></i>
           <i class="fas fa-bars"></i>
-        </span>
-      </div>
+        </div>
 
     </header>
 

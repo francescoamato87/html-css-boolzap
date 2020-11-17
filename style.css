@@ -33,39 +33,47 @@ i:hover{
   background: #fff;
 }
 
-.side{
-flex-basis: 35%;
+/* .................................................. */
+
+/* ASIDE */
+
+
+aside .side{
+  display: flex;
+  flex-basis: 40%;
   background: #fff;
+  overflow-y: auto;
 }
 
-.side-utente{
+aside .side-utente{
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #eaeaea;
+
 }
 
-.side-utente img{
+aside .side-utente img{
   width: 67px;
   padding: 10px;
   border-radius: 50px;
 }
 
-.side-utente p{
+aside .side-utente p{
   font-size: 16px;
   margin-right: auto;
 }
 
-.side-utente-icons{
+aside .side-utente-icons{
   color: grey;
   padding: 15px;
 }
 
-.side-utente-icons i{
+aside .side-utente-icons i{
   padding: 5px;
 }
 
-.container-side-notifiche{
+aside .container-side-notifiche{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -73,38 +81,38 @@ flex-basis: 35%;
   padding: 15px;
   background-color: #8edafc;
 }
-.side-notifiche p, a{
+aside .side-notifiche p, a{
   font-size: 16px;
   line-height: 10px;
   padding: 3px;
   margin-left: 3px;
 }
 
-.side-notifiche a{
+aside .side-notifiche a{
   color: blue;
 }
 
-.container-bell{
+aside .container-bell{
   width: 40px;
   height: 40px;
   border-radius: 50px;
   background-color: white;
 }
-.container-bell i{
+aside .container-bell i{
   padding-left: 8px;
   padding-top: 10px;
   color: #8edafc;
 }
 
-.container-bell i:hover{
+aside .container-bell i:hover{
   color:blue;
 }
-.side .input-search{
+aside .input-search{
   background-color:#eaeaea;
   padding: 10px;
 }
 
-.side .search{
+aside .search{
   min-width: 90%;
   padding: 8px;
   margin-left: 5px;
@@ -113,24 +121,21 @@ flex-basis: 35%;
   outline: none;
 }
 
-.side .input-search i{
+aside .side .input-search i{
   color: grey;
 }
 
 .content{
-  flex-basis: 65%;
   background: #aaa;
   display: flex;
   flex-direction: column;
+  flex-basis: 59%;
 }
 
-.cont-header{
-  background-color:#eaeaea;
-}
 
 /* ....................................... */
 
-.profile{
+.content .profile{
   display: flex;
   align-items: center;
   justify-content:flex-start;
@@ -176,7 +181,6 @@ flex-basis: 35%;
   cursor: pointer;
 }
 
-
 .contact img{
   max-width: 15%;
   padding: 10px;
@@ -198,6 +202,8 @@ border-bottom: 1px solid #eaeaea;
 
 
 /* ............................................................... */
+
+/* footer */
 
 .cont-footer {
   display: flex;
@@ -265,3 +271,5 @@ align-content: center;
 justify-content: flex-end;
 padding: 8px;
 }
+
+              /* MEDIA QUERIES */
