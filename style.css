@@ -34,7 +34,7 @@ i:hover{
 }
 
 .side{
-  flex-basis: 35%;
+flex-basis: 35%;
   background: #fff;
 }
 
@@ -46,7 +46,7 @@ i:hover{
 }
 
 .side-utente img{
-  max-width: 15%;
+  width: 67px;
   padding: 10px;
   border-radius: 50px;
 }
@@ -138,7 +138,7 @@ i:hover{
 }
 
 .profile img{
-  max-width: 64px;
+  width: 67px;
   padding: 10px;
   border-radius: 50px;
 }

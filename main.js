@@ -20,6 +20,7 @@ var app = new Vue({
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -42,6 +43,7 @@ var app = new Vue({
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -64,6 +66,7 @@ var app = new Vue({
                 name: 'Samuele',
                 avatar: '_3',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -86,6 +89,7 @@ var app = new Vue({
                 name: 'Luisa',
                 avatar: '_4',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -104,6 +108,7 @@ var app = new Vue({
                 name: 'Andrea',
                 avatar: '_5',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -126,6 +131,7 @@ var app = new Vue({
                 name: 'Tommaso',
                 avatar: '_7',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -143,6 +149,7 @@ var app = new Vue({
                 name: 'Paolo',
                 avatar: '_8',
                 visible: true,
+                lastMessage: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -161,6 +168,7 @@ var app = new Vue({
         newMessage: '',
 
     },
+
     methods: {
       setActiveContact(index){
         console.log(index);
